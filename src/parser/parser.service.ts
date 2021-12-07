@@ -1,6 +1,9 @@
+import {injectable} from 'inversify';
 import cheerio from 'cheerio';
+import { IParserService } from './parser.servise.interface';
 
-export class ParserService {
+@injectable()
+export class ParserService implements IParserService {
 	constructor() {}
 
 	title(data: string): string {

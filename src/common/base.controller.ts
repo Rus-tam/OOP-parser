@@ -1,8 +1,9 @@
 import { Router } from 'express';
 import { IControllerRoute } from './route.interface';
 import { ParserService } from '../parser/parser.service';
+import { injectable } from 'inversify';
 
-
+@injectable()
 export abstract class BaseController {
 	private readonly _router: Router;
 	public _parserService: ParserService;
